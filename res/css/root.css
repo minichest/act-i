@@ -1,0 +1,31 @@
+/* colours */
+
+:root {
+    --stardust-speedway-purple: #30097E;
+    --casino-nights-black: #000000;
+    --casino-nights-gold: #b09a17;
+    --casino-nights-pink: #bf30a3;
+
+    --dusk-blue: #465775;
+    --blue-bell: #20a4f3;
+    --neon-ice: #59f8e8;
+    --burgundy: #941c2f;
+    --banana-cream: #fff07c;
+    --peach-fuzz: #ffd5c2;
+}
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 2px;
+    color: var(--blue-bell);
+}
+
+p, a, button, li, span, small {
+    font-family: 'Space Mono', monospace;
+    color: var(--dusk-blue);
+}
+

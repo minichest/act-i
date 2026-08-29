@@ -3,7 +3,7 @@ languageCode = 'en-gb'
 title = 'act 1.2'
 theme = 'stardust'
 
-# publishDir = '../act-1.2'
+publishDir = '../act-1.2'
 
 paginate = 4
 

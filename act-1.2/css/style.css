@@ -206,8 +206,10 @@ main {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.stardust-fragment:nth-child(odd) {
-    border-right: 0.2px dashed var(--stardust-speedway-purple);
+@media (min-width: 600px) {
+    .stardust-fragment:nth-child(odd) {
+        border-right: 0.2px dashed var(--stardust-speedway-purple);
+    }
 }
 
 .stardust-fragment {
@@ -254,11 +256,16 @@ main {
         grid-template-columns: 1fr; 
     }
 
-    .stardust-fragment {
-        /* Removes the vertical side border on mobile and adds a bottom separator line instead */
+    .stardust-fragment:nth-child(odd) {
         border-right: none;
+    }
+
+    .stardust-fragment:not(:last-child) {
         border-bottom: 0.2px dashed var(--stardust-speedway-purple);
-        padding: 15px 10px; /* Slightly increases padding for comfortable mobile tapping */
+    }
+
+    .stardust-fragment {
+        padding: 15px 10px; 
     }
 }
 
@@ -294,7 +301,7 @@ main {
 body::after {
   content: '';
   display: block;
-  height: 50px;
+  height: 150px;
 }
 
 footer {

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on act 1.2</title>
-    <link>https://aezlo.com/act-1.2/posts/</link>
+    <link>http://localhost:1313/act-1.2/posts/</link>
     <description>Recent content in Posts on act 1.2</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 29 Aug 2026 21:58:00 +0100</lastBuildDate>
-    <atom:link href="https://aezlo.com/act-1.2/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/act-1.2/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to Stardust Speedway v3</title>
-      <link>https://aezlo.com/act-1.2/posts/my-first-post-copy-2/</link>
+      <link>http://localhost:1313/act-1.2/posts/my-first-post-copy-2/</link>
       <pubDate>Sat, 29 Aug 2026 21:58:00 +0100</pubDate>
-      <guid>https://aezlo.com/act-1.2/posts/my-first-post-copy-2/</guid>
+      <guid>http://localhost:1313/act-1.2/posts/my-first-post-copy-2/</guid>
       <description>This is just a post used to set up this whole blog - hope you enjoy reading it</description>
     </item>
     <item>
       <title>Welcome to Stardust Speedway v2</title>
-      <link>https://aezlo.com/act-1.2/posts/my-first-post-copy/</link>
+      <link>http://localhost:1313/act-1.2/posts/my-first-post-copy/</link>
       <pubDate>Sat, 29 Aug 2026 21:53:00 +0100</pubDate>
-      <guid>https://aezlo.com/act-1.2/posts/my-first-post-copy/</guid>
+      <guid>http://localhost:1313/act-1.2/posts/my-first-post-copy/</guid>
       <description>This is just a post used to set up this whole blog - hope you enjoy reading it</description>
     </item>
     <item>
       <title>Welcome to Stardust Speedway v1</title>
-      <link>https://aezlo.com/act-1.2/posts/my-first-post/</link>
+      <link>http://localhost:1313/act-1.2/posts/my-first-post/</link>
       <pubDate>Sat, 29 Aug 2026 18:05:00 +0100</pubDate>
-      <guid>https://aezlo.com/act-1.2/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/act-1.2/posts/my-first-post/</guid>
       <description>This is just a post used to set up this whole blog - hope you enjoy reading it</description>
     </item>
   </channel>

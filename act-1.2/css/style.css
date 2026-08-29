@@ -206,14 +206,8 @@ main {
     grid-template-columns: repeat(2, 1fr);
 }
 
-@media (min-width: 600px) {
-    .stardust-fragment:nth-child(odd) {
-        border-right: 0.2px dashed var(--stardust-speedway-purple);
-    }
-
-    .stardust-fragment:not(:nth-last-child(-n+1)) {
-         border-bottom: 0.2px dashed var(--stardust-speedway-purple);
-    }
+.stardust-fragment:nth-child(odd) {
+    border-right: 0.2px dashed var(--stardust-speedway-purple);
 }
 
 .stardust-fragment {
@@ -260,16 +254,11 @@ main {
         grid-template-columns: 1fr; 
     }
 
-    .stardust-fragment:nth-child(odd) {
-        border-right: none;
-    }
-
-    .stardust-fragment:not(:last-child) {
-        border-bottom: 0.2px dashed var(--stardust-speedway-purple);
-    }
-
     .stardust-fragment {
-        padding: 15px 10px; 
+        /* Removes the vertical side border on mobile and adds a bottom separator line instead */
+        border-right: none;
+        border-bottom: 0.2px dashed var(--stardust-speedway-purple);
+        padding: 15px 10px; /* Slightly increases padding for comfortable mobile tapping */
     }
 }
 
@@ -300,26 +289,12 @@ main {
     }
 }
 
-@media (max-width: 240px) {
-    .site-layout, footer {
-        display: none;
-    }
-
-    body {
-        background-image: none;
-    }
-
-    body:before {
-        background-color: var(--casino-nights-black);
-    }
-}
-
 /* Footer */
 
 body::after {
   content: '';
   display: block;
-  height: 150px;
+  height: 50px;
 }
 
 footer {

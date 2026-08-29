@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/act-1.2/</loc>
+    <loc>https://aezlo.com/act-1.2/</loc>
     <lastmod>2026-08-29T21:58:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/act-1.2/posts/</loc>
+    <loc>https://aezlo.com/act-1.2/posts/</loc>
     <lastmod>2026-08-29T21:58:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/act-1.2/posts/my-first-post-copy-2/</loc>
+    <loc>https://aezlo.com/act-1.2/posts/my-first-post-copy-2/</loc>
     <lastmod>2026-08-29T21:58:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/act-1.2/posts/my-first-post-copy/</loc>
+    <loc>https://aezlo.com/act-1.2/posts/my-first-post-copy/</loc>
     <lastmod>2026-08-29T21:53:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/act-1.2/posts/my-first-post/</loc>
+    <loc>https://aezlo.com/act-1.2/posts/my-first-post/</loc>
     <lastmod>2026-08-29T18:05:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/act-1.2/categories/</loc>
+    <loc>https://aezlo.com/act-1.2/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/act-1.2/tags/</loc>
+    <loc>https://aezlo.com/act-1.2/tags/</loc>
   </url>
 </urlset>

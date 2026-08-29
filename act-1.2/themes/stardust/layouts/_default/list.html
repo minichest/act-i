@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<section class="blog-feed">
+    <h1>Articles</h1>
+    <ul class="posts-list">
+        {{ range .Site.RegularPages }}
+        <li class="post-item">
+            <time>{{ .Date.Format "Jan 2, 2006" }}</time> — 
+            <a href="{{ .Permalink }}" class="post-link"><strong>{{ .Title }}</strong></a>
+            
+            {{ if .Summary }}
+            <p class="post-summary">{{ .Summary }}</p>
+            {{ end }}
+        </li>
+        
+        {{ else }}
+        <p>No posts written just yet!</p>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}

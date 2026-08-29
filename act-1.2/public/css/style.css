@@ -1,0 +1,368 @@
+/* Imports */
+
+@import url('../fonts/armin-soft/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('../font-awesome/css/all.css');
+
+/* Colours */
+
+:root {
+    --stardust-speedway-purple: #30097E;
+    --casino-nights-black: #000000;
+    --casino-nights-gold: #b09a17;
+    --casino-nights-pink: #bf30a3;
+
+    --dusk-blue: #465775;
+    --blue-bell: #20a4f3;
+    --neon-ice: #59f8e8;
+    --light-neon-ice: #e1ffff;
+    --burgundy: #941c2f;
+    --banana-cream: #fff07c;
+    --peach-fuzz: #ffd5c2;
+    --light-warning-crimson: #fff3f2;
+    --light-meteor-orange: #fae8e0;
+
+    /* Stardust Speedway */
+    --speedway-midnight: #0f0226;
+    --laser-indigo: #240b4f;
+    --metal-blue: #1a1f38;
+    --neon-overdrive: #e5007d;
+
+    /* Casino Night */
+    --casino-void: #0a0a14;
+    --velvet-maroon: #4a0e17;
+    --slot-gold: #d4af37;
+    --neon-magenta: #ff007f;
+
+    /* Death Egg Core */
+    --death-egg-hull: #16191e;
+    --hangar-shadow: #212730;
+    --power-grid-blue: #00a3e0;
+    --warning-crimson: #c8102e;
+
+    /* Final Rush */
+    --space-abyss: #020208;
+    --cosmic-nebula: #180d2c;
+    --grind-rail-cyan: #00f5ff;
+    --meteor-orange: #ff5500;
+}
+
+/* Background */
+
+body {
+    /* 1. Add your image file path here */
+    background-image: url('../img/spring-yard-zone.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    background-color: color-mix(in hsl, var(--banana-cream), transparent 40%);
+    backdrop-filter: blur(10px);
+    
+    pointer-events: none;
+}
+
+/* Text */
+
+h1, h2, h3, h4, h5, h6, h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+    color: var(--burgundy);
+    font-family: 'Armin Soft Ultra';
+}
+
+p, a, .post-content > ul > li {
+    color: var(--stardust-speedway-purple);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.post-content > ul > li, time {
+    color: var(--dusk-blue);
+}
+
+time {
+    font-family: "Space Mono", monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Text Sizing */
+
+h1 {
+    font-size: clamp(1.75rem, 4vw + 1rem, 3rem);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+h2 {
+    font-size: clamp(1.375rem, 3vw + 0.75rem, 2.25rem);
+    margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+h3 {
+    font-size: clamp(1.125rem, 2vw + 0.5rem, 1.75rem);
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+h4, h5, h6 {
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.375rem);
+    margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+p, a, li {
+    font-size: clamp(0.938rem, 0.5vw + 0.8rem, 1.125rem);
+}
+
+p {
+    margin-bottom: clamp(0.75rem, 1vw, 1.25rem);
+}
+
+span, time, .post-summary {
+    font-size: clamp(0.813rem, 0.3vw + 0.75rem, 0.938rem);
+    margin-bottom: 0;
+}
+
+/* Navigation */
+
+ul.nav {
+    list-style-type: none;
+    margin: 0px;          
+    padding: 0;
+    background-color: var(--peach-fuzz);
+    width: 180px;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+ul.nav > li a {
+    display: block;
+    color: var(--dusk-blue);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.nav > li a:hover {
+    color: var(--light-neon-ice);
+    background-color: var(--burgundy);
+}
+
+.main-link {
+    border-bottom: 0.2px dashed var(--casino-nights-black);
+    margin-bottom: 0;
+}
+
+li:not(.main-link) {
+    margin-top: -10px;
+}
+
+/* Layout Wrapper */
+
+.site-layout {
+    display: flex;         
+    align-items: flex-start; 
+    width: 100%;
+}
+
+main {
+    flex: 1;               
+    max-width: 800px;
+    margin: 0 auto;        
+    padding: 20px 40px;   
+
+    box-sizing: border-box;
+    background-color: var(--light-warning-crimson);
+    top: 50px;
+    position: relative;
+}
+
+/* Post Container - Home */
+
+.cluster-heading {
+    text-align: center;
+}
+
+.cosmic-cluster {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stardust-fragment:nth-child(odd) {
+    border-right: 0.2px dashed var(--stardust-speedway-purple);
+}
+
+.stardust-fragment {
+    padding: 5px 10px;
+}
+
+/* Blog Post - Container */
+
+.post-single {
+    padding: 10px;
+}
+
+.post-content > ul > li {
+    margin-top: 20px;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.pagination a {
+    color: var(--stardust-speedway-purple);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+.pagination .active a {
+    color: var(--burgundy);
+    border-bottom: 2px solid var(--burgundy);
+}
+
+/* Responsive Layout Adjustments */
+
+@media (max-width: 600px) {
+    .cosmic-cluster {
+        /* Flips the grid to a single vertical column on mobile screens */
+        grid-template-columns: 1fr; 
+    }
+
+    .stardust-fragment {
+        /* Removes the vertical side border on mobile and adds a bottom separator line instead */
+        border-right: none;
+        border-bottom: 0.2px dashed var(--stardust-speedway-purple);
+        padding: 15px 10px; /* Slightly increases padding for comfortable mobile tapping */
+    }
+}
+
+@media (max-width: 1440px) {
+    .site-layout {
+        display: block;
+    }
+
+    ul.nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0;
+        top: 40px;
+        position: relative;
+    }
+
+    .post-single {
+        padding: 15px;
+    }
+
+    .speedway-broadcast {
+        top: 20px;
+        position: relative;
+    }
+}
+
+/* Footer */
+
+body::after {
+  content: '';
+  display: block;
+  height: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: auto;
+}
+
+
+footer {
+    background-image: linear-gradient(90deg, var(--speedway-midnight) 0%, var(--laser-indigo) 14%, var(--metal-blue) 28%, var(--casino-void) 42%, var(--space-abyss) 57%, var(--cosmic-nebula) 71%, var(--death-egg-hull) 85%, var(--hangar-shadow) 100%);
+}
+
+footer > p {
+    text-align: center;
+    color: var(--slot-gold);
+}
+
+footer > p > a {
+    color: var(--meteor-orange);
+}
+
+/* hover states */
+
+.fa-palette:hover {
+    color: var(--grind-rail-cyan);
+}
+
+.fa-heart:hover {
+    color: var(--casino-nights-pink);
+}
+
+.fa-code:hover {
+    color: var(--blue-bell);
+}
+
+/* special footer links */
+
+.me, .hugo, .prose {
+  position: relative;
+  display: inline-block; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.me::before, .hugo::before, .prose::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.me:hover::before, .hugo:hover::before, .prose:hover::before {
+  transform: scaleX(1);
+}
+
+.me:hover { color: var(--power-grid-blue); }
+.me::before { background-color: var(--power-grid-blue); }
+
+.hugo:hover { color: var(--neon-overdrive); }
+.hugo::before { background-color: var(--neon-overdrive); }
+
+.prose:hover { color: var(--light-neon-ice); }
+.prose::before { background-color: var(--light-neon-ice); }

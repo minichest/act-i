@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="post-single">
+    <header>
+        <h1>{{ .Title }}</h1>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+    </header>
+    
+    <div class="post-content">
+        <!-- This exact tag converts your raw Markdown text into clean HTML -->
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

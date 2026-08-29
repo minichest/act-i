@@ -1,0 +1,61 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div class="speedway-broadcast">
+    <h1 class="cluster-heading">Speedway Broadcast</h1>
+  </div>
+
+  <div class="cosmic-cluster">
+  {{ $paginator := .Paginate site.RegularPages }}
+  {{ range $paginator.Pages }}
+    <div class="stardust-fragment">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p>{{ .Summary }}</p>
+    </div>
+  {{ end }}
+  </div>
+
+  <!-- This outputs the page numbers, Next, and Prev buttons -->
+  {{ $pag := .Paginator }}
+    {{ if gt $pag.TotalPages 1 }}
+    <ul class="cosmic-pagination">
+      
+      <!-- First Page Button -->
+      {{ if $pag.HasPrev }}
+      <li class="page-item">
+        <a href="{{ $pag.First.URL }}" class="page-link"><i class="fa-pixel fa-regular fa-backward"></i></i></a>
+      </li>
+      {{ end }}
+
+      <!-- Previous Page Button -->
+      {{ if $pag.HasPrev }}
+      <li class="page-item">
+        <a href="{{ $pag.Prev.URL }}" class="page-link"><i class="fa-pixel fa-regular fa-arrow-left"></i></a>
+      </li>
+      {{ end }}
+
+      <!-- Page Numbers Loop -->
+      {{ range $pag.Pagers }}
+      <li class="page-item {{ if eq .PageNumber $pag.PageNumber }}active{{ end }}">
+        <a href="{{ .URL }}" class="page-link">{{ .PageNumber }}</a>
+      </li>
+      {{ end }}
+
+      <!-- Next Page Button -->
+      {{ if $pag.HasNext }}
+      <li class="page-item">
+        <a href="{{ $pag.Next.URL }}" class="page-link"><i class="fa-pixel fa-regular fa-arrow-right"></i></a>
+      </li>
+      {{ end }}
+
+      <!-- Last Page Button -->
+      {{ if $pag.HasNext }}
+      <li class="page-item">
+        <a href="{{ $pag.Last.URL }}" class="page-link"><i class="fa-pixel fa-regular fa-forward"></i></a>
+      </li>
+      {{ end }}
+
+    </ul>
+  {{ end }}
+
+</div>
+{{ end }}

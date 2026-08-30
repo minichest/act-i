@@ -255,10 +255,15 @@ main {
     }
 
     .stardust-fragment {
-        /* Removes the vertical side border on mobile and adds a bottom separator line instead */
-        border-right: none;
-        border-bottom: 0.2px dashed var(--stardust-speedway-purple);
         padding: 15px 10px; /* Slightly increases padding for comfortable mobile tapping */
+    }
+
+    .stardust-fragment:nth-child(2n+1) {
+        border-right: none;
+    }
+
+    .stardust-fragment:not(:last-child) {
+        border-bottom: 0.2px dashed var(--stardust-speedway-purple);
     }
 }
 

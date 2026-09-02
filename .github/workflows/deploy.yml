@@ -30,7 +30,7 @@ jobs:
       # Adjust 'script.js' below if your JavaScript file has a different name
       - name: Inject Secret Token
         run: |
-          sed -i "s/GITHUB_TOKEN_PLACEHOLDER/${{ secrets.MY_GITHUB_TOKEN }}/g" script.js
+          sed -i "s/GITHUB_TOKEN_PLACEHOLDER/${{ secrets.MY_GITHUB_TOKEN }}/g" act-1.3/action.js
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3

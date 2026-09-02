@@ -10,8 +10,12 @@ async function renderGitTracker() {
 
     const events = await response.json();
 
-    
+    if (!Array.isArray(events)) {
+        throw new Error(events.message || "Invalid API response structure");
+    }
+
     const pushEvents = events.filter(event => event.type === "PushEvent");
+
 
     if (pushEvents.length > 0) {
       const latestPush = pushEvents[0]; 

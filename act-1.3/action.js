@@ -50,7 +50,7 @@ async function renderGitTracker() {
         // 5. Append each commit element onto the screen list row by row
         const logRow = document.createElement("p");
         logRow.className = "data-field log-row";
-        logRow.innerHTML = `LOG ${i + 1} // "${commitMessage}"`;
+        logRow.innerHTML = `LOG ${i + 1} - "${commitMessage}"`;
         
         logLink.appendChild(logRow);
       }

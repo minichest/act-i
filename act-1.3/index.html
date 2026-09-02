@@ -7,9 +7,18 @@
     <body>
         <div class="terminal-widget">
             <div class="terminal-header">ACT 1.3 // LIVE MATRIX FEED</div>
-            <div id="git-status" class="terminal-body">
-                [OFFLINE] Initializing secure data stream...
+            <div class="terminal-body">
+                <p><span class="status-tag active">[ONLINE]</span> STREAM STABLE</p>
+                <p class="data-field">CORE.REPO // <span class="highlight">ACT-I</span></p>
+                
+                <!-- The JavaScript will inject the list of logs right here -->
+                <div id="git-log-container" class="log-list"></div>
+                
+                <p class="timestamp">SYNCED: JUST NOW</p>
             </div>
         </div>
+
+
+        <script src="action.js"></script>
     </body>
 </html>

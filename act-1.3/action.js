@@ -1,65 +1,67 @@
 async function renderGitTracker() {
-  const statusContainer = document.getElementById("git-status");
+  const logContainer = document.getElementById("git-log-container");
 
   try {
     const response = await fetch("./github-data.json");
-    
-    if (!response.ok) {
-      throw new Error(`System Error: Data file status ${response.status}`);
-    }
+    if (!response.ok) throw new Error("Matrix database offline");
 
     const events = await response.json();
+    if (!Array.isArray(events)) throw new Error("Invalid structure format");
 
-    if (!Array.isArray(events)) {
-        throw new Error(events.message || "Invalid API response structure");
-    }
-
+    // 1. Filter out all active PushEvents from your data stream
     const pushEvents = events.filter(event => event.type === "PushEvent");
 
-
     if (pushEvents.length > 0) {
-      const latestPush = pushEvents[0]; 
-      const repoName = latestPush.repo.name.split("/")[1];
-      const commitMessage = latestPush.payload.commits[0].message;
-      
-      const eventDate = new Date(latestPush.created_at);
-      const timeAgo = formatTimeAgo(eventDate);
+      // 2. Clear out your default loading text layout
+      logContainer.innerHTML = "";
 
-      statusContainer.innerHTML = `
-        <p><span class="status-tag active">[ONLINE]</span> CONNECTION STABLE</p>
-        <p class="data-field">CORE.REPO // <span class="highlight">${repoName.toUpperCase()}</span></p>
-        <p class="data-field">LAST.LOG  // "${commitMessage}"</p>
-        <p class="timestamp">SYNCED: ${timeAgo}</p>
-      `;
+      // 3. Take the last 4 push events to create a clean set display
+      const recentSet = pushEvents.slice(0, 4);
+
+      // 4. Loop through the set and compile their tracking logs asynchronously
+      for (let i = 0; i < recentSet.length; i++) {
+        const currentPush = recentSet[i];
+        const repoPath = currentPush.repo.name;
+        const commitHash = currentPush.payload.head;
+
+        // Fetch each corresponding handwritten description string name
+        const commitResponse = await fetch(`https://api.github.com/repos/${repoPath}/commits/${commitHash}`, {
+           headers: {
+                "Accept": "application/vnd.github+json",
+                "Authorization": "Bearer GITHUB_TOKEN_PLACEHOLDER",
+                "X-GitHub-Api-Version": "2022-11-28"
+            }
+        });
+        
+        let commitMessage = "Matrix system update.";
+        if (commitResponse.ok) {
+          const commitDetails = await commitResponse.json();
+          commitMessage = commitDetails.commit.message;
+        }
+
+        const logLink = document.createElement("a")
+        logLink.href = `https://github.com/${repoPath}/commit/${commitHash}`;
+
+        logLink.target = "_blank";
+        logLink.rel = "noopener noreferrer";
+
+        logContainer.append(logLink)
+
+        // 5. Append each commit element onto the screen list row by row
+        const logRow = document.createElement("p");
+        logRow.className = "data-field log-row";
+        logRow.innerHTML = `LOG_0${i + 1} // "${commitMessage}"`;
+        
+        logLink.appendChild(logRow);
+      }
     } else {
-      statusContainer.innerHTML = `
-        <p><span class="status-tag idle">[IDLE]</span> NO RECENT DATA PUSHES DETECTED</p>
-      `;
+      logContainer.innerHTML = `<p class="data-field">[IDLE] STANDBY // NO RECENT LOG SETS FOUND</p>`;
     }
 
   } catch (error) {
-    console.error("Tracker link broken:", error);
-    statusContainer.innerHTML = `
-      <p><span class="status-tag error">[CRITICAL]</span> DATA EXTRACTION FAILED</p>
-      <p class="timestamp">VERIFY SITE DISPATCH PIPELINES</p>
-    `;
+    console.error("Set sync failure:", error);
+    logContainer.innerHTML = `<p class="status-tag error">[CRITICAL] MATRIX LOG UNRESOLVED</p>`;
   }
-}
-
-function formatTimeAgo(date) {
-  const seconds = Math.floor((new Date() - date) / 1000);
-  let interval = Math.floor(seconds / 31536000);
-
-  if (interval >= 1) return `${interval}y ago`;
-  interval = Math.floor(seconds / 2592000);
-  if (interval >= 1) return `${interval}mo ago`;
-  interval = Math.floor(seconds / 86400);
-  if (interval >= 1) return `${interval}d ago`;
-  interval = Math.floor(seconds / 3600);
-  if (interval >= 1) return `${interval}h ago`;
-  interval = Math.floor(seconds / 60);
-  if (interval >= 1) return `${interval}m ago`;
-  return "just now";
 }
 
 window.addEventListener("DOMContentLoaded", renderGitTracker);

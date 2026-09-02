@@ -1,0 +1,42 @@
+name: Deploy Static Site with Secret
+
+on:
+  push:
+    branches:
+      - main  # Change this to 'master' if your default branch is master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Adjust 'script.js' below if your JavaScript file has a different name
+      - name: Inject Secret Token
+        run: |
+          sed -i "s/GITHUB_TOKEN_PLACEHOLDER/${{ secrets.MY_GITHUB_TOKEN }}/g" script.js
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Uploads the root directory containing index.html and script.js
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

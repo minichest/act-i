@@ -16,7 +16,7 @@ async function renderGitTracker() {
       logContainer.innerHTML = "";
 
       // 3. Take the last 4 push events to create a clean set display
-      const recentSet = pushEvents.slice(0, 4);
+      const recentSet = pushEvents.slice(0, 10);
 
       // 4. Loop through the set and compile their tracking logs asynchronously
       for (let i = 0; i < recentSet.length; i++) {
@@ -50,7 +50,7 @@ async function renderGitTracker() {
         // 5. Append each commit element onto the screen list row by row
         const logRow = document.createElement("p");
         logRow.className = "data-field log-row";
-        logRow.innerHTML = `LOG_0${i + 1} // "${commitMessage}"`;
+        logRow.innerHTML = `LOG ${i + 1} // "${commitMessage}"`;
         
         logLink.appendChild(logRow);
       }

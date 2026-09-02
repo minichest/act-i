@@ -25,7 +25,47 @@ jobs:
           curl -s -H "Authorization: Bearer $TRACKER_TOKEN" \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/users/minichest/events > act-1.3/github-data.json
+            https://api.github.com/users/minichest/events > act-1.3/temp-events.json
+
+          # 2. Use Node to safely extract the last 4 unique PushEvent hashes
+          node -e "
+            const fs = require('fs');
+            const data = JSON.parse(fs.readFileSync('temp-events.json', 'utf8'));
+            const pushes = data.filter(e => e.type === 'PushEvent').slice(0, 4);
+            const hashes = pushes.map(p => ({ repo: p.repo.name, sha: p.payload.head }));
+            fs.writeFileSync('temp-hashes.json', JSON.stringify(hashes));
+          "
+
+          # 3. Create a clean JSON array structure to hold the text names locally
+          echo "[" > act-1.3/github-data.json
+
+          # 4. Loop through the hashes securely using your token behind the scenes
+          count=0
+          cat temp-hashes.json | node -e "
+            const fs = require('fs');
+            const items = JSON.parse(fs.readFileSync(0, 'utf-8'));
+            console.log(items.map(i => i.repo + '|' + i.sha).join('\n'));
+          " | while IFS='|' read -r repo sha; do
+            if [ ! -z "$sha" ]; then
+              if [ $count -gt 0 ]; then echo "," >> act-1.3/github-data.json; fi
+              
+              # Grab the commit message using authorization
+              MSG=$(curl -s -H "Authorization: Bearer $TRACKER_TOKEN" \
+                -H "Accept: application/vnd.github+json" \
+                \"https://api.github.com/users/minichest/events\" | node -e "
+                  const fs = require('fs');
+                  try {
+                    const data = JSON.parse(fs.readFileSync(0, 'utf-8'));
+                    console.log(data.commit ? data.commit.message.replace(/\"/g, '\\\"').replace(/\n/g, ' ') : 'System update');
+                  } catch(e) { console.log('System update'); }
+                ")
+              
+              echo "{\"message\": \"$MSG\"}" >> act-1.3/github-data.json
+              count=$((count+1))
+            fi
+          done
+
+          echo "]" >> act-1.3/github-data.json
 
       # Step 3: Automatically syncs and commits the data file safely without clashing
       - name: Commit and Push Data File

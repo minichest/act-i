@@ -30,6 +30,12 @@
     pointer-events: none; 
 }
 
+/* special addition */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* The Floating Hero Card */
 .hero {
     background-color: color-mix(in srgb, var(--peach-fuzz) 70%, var(--banana-cream));

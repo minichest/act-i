@@ -1,0 +1,16 @@
+.terminal-widget {
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(10, 15, 30, 0.85);
+  border: 2px solid #38bdf8;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.highlight {
+  color: #f472b6;
+  text-shadow: 0 0 8px rgba(244, 114, 182, 0.6);
+}
+.status-tag.active {
+  color: #4ade80; 
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.8);
+}

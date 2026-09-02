@@ -19,7 +19,7 @@ jobs:
       # Step 2: Saved specifically inside the act-1.3 directory
       - name: Fetch from GitHub API
         run: |
-          curl -s -H "Authorization: Bearer ${{secrets.MY_GITHUB_TOKEN}}" \
+          curl -s -H "Authorization: Bearer ${{ secrets.MY_GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github+json" \
           https://github.com > act-1.3/github-data.json
 

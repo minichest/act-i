@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(rgba(10, 15, 30, 0.88), rgba(10, 15, 30, 0.88)),
-              url('../res/images/launch-based-zone.png') center/cover no-repeat fixed;
+              url('../../images/launch-based-zone.png') center/cover no-repeat fixed;
   filter: saturate(1.4);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);

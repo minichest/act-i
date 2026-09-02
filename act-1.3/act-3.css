@@ -33,9 +33,9 @@
 }
 
 .log-link:hover {
-    color:#a1fbc2;
+    color:#a1fbc2 !important;
 }
 
 .log-link:visited {
-    color:#ffe396;
+    color:#aafbf7;
 }

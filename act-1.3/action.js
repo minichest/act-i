@@ -41,7 +41,7 @@ async function renderGitTracker() {
 
         const logLink = document.createElement("a")
         logLink.href = `https://github.com/${repoPath}/commit/${commitHash}`;
-
+        logLink.className = "log-link"
         logLink.target = "_blank";
         logLink.rel = "noopener noreferrer";
 

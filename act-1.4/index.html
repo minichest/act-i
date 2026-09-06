@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ACT 1.4: A SPECIAL</title>
+        <link rel="stylesheet" href="../res/css/pages/act-4.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class="container"> 
+        <!-- Left Panel: Interactive Lists -->
+        <div class="card">
+            <h2>Active Subscriptions</h2>
+            <div id="subs-list">
+                <div class="input-row">
+                    <input type="text" placeholder="e.g., Streaming Service" class="sub-name" value="Sample Sub">
+                    <input type="number" placeholder="Cost" class="sub-cost" value="15" min="0">
+                    <select class="sub-cycle">
+                        <option value="12">/ Month</option>
+                        <option value="1">/ Year</option>
+                    </select>
+                    <button class="btn-del" onclick="removeRow(this)">✕</button>
+                </div>
+            </div>
+            <button class="btn-add" onclick="addRow()">+ Add Subscription</button>
+        </div>
+
+        <!-- Right Panel: Data Metrics Output -->
+        <div class="card">
+            <h2>Financial Projections</h2>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Monthly Total</div>
+                    <div class="metric-value" id="m-month">£0.00</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Yearly Total</div>
+                    <div class="metric-value" id="m-year">£0.00</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">3-Year Cumulative</div>
+                    <div class="metric-value" id="m-3year">£0.00</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">5-Year Cumulative</div>
+                    <div class="metric-value" id="m-5year">£0.00</div>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span>Simulated Annual Price Hikes</span>
+                    <span id="inflation-val">0%</span>
+                </div>
+                <input type="range" id="inflation-slider" min="0" max="15" value="0" step="1">
+            </div>
+        </div>
+
+        <!-- Bottom Panel: Visualized Coordinates -->
+        <div class="card full-width">
+            <h2>5-Year Compounding Trajectory</h2>
+            <div class="canvas-container">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="action.js"></script>
+</body>
+</html>

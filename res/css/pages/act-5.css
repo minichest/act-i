@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500&display=swap");
+
+:root {
+    --studiopolis-zone-1: #402396;
+    --studiopolis-zone-2: #ae259a;
+    --studiopolis-zone-3: #afc23f;
+    --studiopolis-zone-4: #11093c;
+    --studiopolis-zone-5: #e46816;
+    --studiopolis-zone-6: #3c78cf;
+    --studiopolis-zone-7: #721a50;
+    --studiopolis-zone-8: #2a0f5a;
+    --studiopolis-zone-9: #b73526; 
+}
+
+body {
+  margin: 0;
+  padding: clamp(10px, 4vw, 40px);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    color-mix(in srgb, var(--studiopolis-zone-2) 30%, transparent),
+    color-mix(in srgb, var(--studiopolis-zone-2) 40%, transparent)
+  ), url('../../images/studiopolis-zone.png') center/cover no-repeat fixed;   
+  filter: saturate(1.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* fonts */
+
+h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+body, .track-title, .track-artist, .artist-name {
+  font-family: 'Space Grotesk', sans-serif;
+}   
+
+/* Music Section */
+#plays-container,
+#album-container,
+#artists-container { 
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+}   
+
+/* Music Container 2 */
+
+#plays-container {
+  background: color-mix(in srgb, var(--studiopolis-zone-6) 44%, transparent);
+}  
+
+#album-container {
+  background: color-mix(in srgb, var(--studiopolis-zone-9) 44%, transparent);
+}  
+
+#artists-container {
+  background: color-mix(in srgb, var(--studiopolis-zone-8) 44%, transparent);
+}  
+
+@media (min-width: 768px) {
+  .most-recent-plays,
+  .top-weekly-albums {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+#plays-container h3,
+#album-container h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  color: #fff;
+}
+
+#plays-container h3:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.track-list,
+.artist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: track;
+}
+
+.track-list li,
+.artist-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.track-list li:last-child,
+.artist-list li:last-child {
+  border-bottom: none;
+}
+
+.track-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.track-artist {
+  font-size: 0.8rem;
+  opacity: 0.55;
+  color: #fff;
+}
+
+.artist-list img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.artist-name {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* hover */
+
+.track-list a, .artist-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.track-list a:hover, .artist-list a:hover {
+  opacity: 0.7;
+}   
+
+/* timestamp */
+
+.timestamp {
+  font-size: 0.7rem;
+  opacity: 1;
+  margin-left: auto;
+  white-space: nowrap;
+  color: var(--studiopolis-zone-3);
+}   
+
+.timestamp.now-playing {
+  color: #ff6b6b;
+  opacity: 1;
+}   

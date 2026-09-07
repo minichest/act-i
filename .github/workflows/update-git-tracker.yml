@@ -36,7 +36,7 @@ jobs:
                   headers: { 'Authorization': 'Bearer ' + process.env.TRACKER_TOKEN, 'Accept': 'application/vnd.github+json' }
                 });
                 const commit = await resp.json();
-                results.push({ message: (commit.commit ? commit.commit.message : 'System update').replace(/\n/g, ' ') });
+                results.push({ message: (commit.commit ? commit.commit.message : 'System update').replace(/\n/g, ' '), repo, sha });   
               } catch(e) {
                 results.push({ message: 'System update' });
               }

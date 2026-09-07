@@ -3,7 +3,7 @@ title: a new me, a new era
 date: 2026-09-07T18:23:44+01:00
 draft:
 summary: This is almost like what I am changing in my life briefly but maybe in the future I will speak more on what is gonna be going on kinda...
-thumbnail: /act-1.2/img/new-me.png
+thumbnail: /act-1.2/img/posts/new-me.png
 tags:
   - new-era
   - new

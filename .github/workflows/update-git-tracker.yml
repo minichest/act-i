@@ -64,12 +64,12 @@ jobs:
             fi
           done
 
-          echo "]" >> act-1.3/github-data.json
+          echo "]" >> github-data.json
 
       # Step 3: Automatically syncs and commits the data file safely without clashing
       - name: Commit and Push Data File
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "system: synced recent git tracking matrix [skip ci]"
-          file_pattern: 'act-1.3/github-data.json'
+          file_pattern: 'github-data.json'
 

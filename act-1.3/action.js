@@ -17,7 +17,7 @@ async function renderGitTracker() {
         const entry = recentSet[i];
 
         const logLink = document.createElement("a");
-        logLink.href = `https://github.com/${entry.repo}/commit/${entry.sha}`;
+        logLink.href = `https://github.com/minichest/${entry.repo}/commit/${entry.sha}`;
         logLink.className = "log-link";
         logLink.target = "_blank";
         logLink.rel = "noopener noreferrer";

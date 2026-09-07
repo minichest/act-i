@@ -36,9 +36,9 @@ jobs:
                   headers: { 'Authorization': 'Bearer ' + process.env.TRACKER_TOKEN, 'Accept': 'application/vnd.github+json' }
                 });
                 const commit = await resp.json();
-                results.push({ message: (commit.commit ? commit.commit.message : 'System update').replace(/\n/g, ' '), repo, sha });   
+                results.push({ repo, sha, message: (commit.commit ? commit.commit.message : 'System update').replace(/\n/g, ' ') });
               } catch(e) {
-                results.push({ message: 'System update' });
+                results.push({ repo, sha, message: 'System update' });
               }
             }
             fs.writeFileSync('github-data.json', JSON.stringify(results, null, 2));

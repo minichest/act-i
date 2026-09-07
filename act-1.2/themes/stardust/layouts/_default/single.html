@@ -4,6 +4,13 @@
         <h1>{{ .Title }}</h1>
         <time>{{ .Date.Format "January 2, 2006" }}</time>
     </header>
+
+    {{ $img := .Params.image | default .Params.thumb | default .Params.thumbnail | default .Params.featuredImage }}
+    {{ with $img }}
+    <figure class="post-thumbnail">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+    </figure>
+    {{ end }}   
     
     <div class="post-content">
         <!-- This exact tag converts your raw Markdown text into clean HTML -->

@@ -1,52 +1,52 @@
 [
   {
-    "message": "major changes",
     "repo": "minichest/act-i",
-    "sha": "f44fd28d6a57f84f0e2a6775cf778a2cbc43b6dd"
+    "sha": "f44fd28d6a57f84f0e2a6775cf778a2cbc43b6dd",
+    "message": "major changes"
   },
   {
-    "message": "Update update-git-tracker.yml",
     "repo": "minichest/act-i",
-    "sha": "67ecb357b9ee831c49f650b6283e03a53f3b610e"
+    "sha": "67ecb357b9ee831c49f650b6283e03a53f3b610e",
+    "message": "Update update-git-tracker.yml"
   },
   {
-    "message": "Update update-git-tracker.yml",
     "repo": "minichest/act-i",
-    "sha": "139f6bc170888f823629982f79dbb565f724aa09"
+    "sha": "139f6bc170888f823629982f79dbb565f724aa09",
+    "message": "Update update-git-tracker.yml"
   },
   {
-    "message": "Update update-git-tracker.yml",
     "repo": "minichest/act-i",
-    "sha": "9ffefbe040c0ffd1d88e782413fbc8d759887e20"
+    "sha": "9ffefbe040c0ffd1d88e782413fbc8d759887e20",
+    "message": "Update update-git-tracker.yml"
   },
   {
-    "message": "Update update-git-tracker.yml",
     "repo": "minichest/act-i",
-    "sha": "73927e0e84a69f156e5334d076b54b68a95ffcc0"
+    "sha": "73927e0e84a69f156e5334d076b54b68a95ffcc0",
+    "message": "Update update-git-tracker.yml"
   },
   {
-    "message": "Update update-git-tracker.yml",
     "repo": "minichest/act-i",
-    "sha": "9068cc7573eee4f258bf9596c52065cb99c7ed05"
+    "sha": "9068cc7573eee4f258bf9596c52065cb99c7ed05",
+    "message": "Update update-git-tracker.yml"
   },
   {
-    "message": "change images",
     "repo": "minichest/act-i",
-    "sha": "59a468aa938cff414bc5b0085fde63ba31053838"
+    "sha": "59a468aa938cff414bc5b0085fde63ba31053838",
+    "message": "change images"
   },
   {
-    "message": "changes",
     "repo": "minichest/act-i",
-    "sha": "1bc29764714dce01540de7b96e29f8f94473368d"
+    "sha": "1bc29764714dce01540de7b96e29f8f94473368d",
+    "message": "changes"
   },
   {
-    "message": "mega update",
     "repo": "minichest/act-i",
-    "sha": "5f1bfd64478d5e714863e7bf270c389593cdfd5e"
+    "sha": "5f1bfd64478d5e714863e7bf270c389593cdfd5e",
+    "message": "mega update"
   },
   {
-    "message": "changes",
     "repo": "minichest/act-i",
-    "sha": "f231b7f2e40efccd9f66ca507a16533b99596161"
+    "sha": "f231b7f2e40efccd9f66ca507a16533b99596161",
+    "message": "changes"
   }
 ]

@@ -3,7 +3,7 @@ title: a new me, a new era
 date: 2026-09-07T18:23:44+01:00
 draft:
 summary: This is almost like what I am changing in my life briefly but maybe in the future I will speak more on what is gonna be going on kinda...
-thumbnail: /act-1.2/img/posts/new-me.png
+thumbnail: /act-1.2/img/posts/new-me-2.png
 tags:
   - new-era
   - new
@@ -15,7 +15,7 @@ tbh at points, i feel like a lot of shit is not worth to keep paying for and hon
 
 i mean you can talk about subscriptions honestly, i cancelled a decent amount of the few i used like i don't plan to go back to netflix and i don't plan to ever use spotify again but let's get to what man has to say in it
 
-# 1. subscriptions....
+## 1. subscriptions....
 
 more that i look at all this subscription shit, it's just not getting me nowhere and i almost feel like i'm spending a little too much living by them. i mean there was a time i had chatgpt plus, some twitter subscription shit for bookmarks, spotify for a while, discord for ages and other shit but honestly it's like this summer - i just realised how meaningful this shit can be when you migrate it to your own side of things.
 
@@ -23,14 +23,14 @@ more that i look at all this subscription shit, it's just not getting me nowhere
 
 I mean growing up in the UK - shit was chill back in the late 2000s and early 2010s. I had a lot of fun on early youtube and was heavy on vlc back in the day as a young kid. I was using pcs from like 2009 and got my first pc by 2012 (a windows 8 sky blue pavillion). then i feel like all that independent stuff kinda went away from me as i grew up, i started using socials and then started using spotify more and more but slowly i began to have enough...
 
-# 2. social media
+## 2. social media
 
 if i'm gonna be honest with you, me and social media in 2026 - man i'm tired of it lol. I mean i was on sites like twitter since 2020 (had an account from 2016) but honestly shit is like a cesspool these days....almost everything trending just built on negativity these days on that platform. Insta is kinda different since i don't spend that much time on it these days.
 
 I mean even discord - i honestly don't know if its even worth it to keep nitro (since it feel like nothin and smthn at the same time) and to even keep my account there still. I mean for most people it's easy to leave smthn relatively quickly and for me - it would be pretty easy to leave shit
 behind but there is something different. I mean i been using Discord for around 10 years so this isn't a habit you can drop easily and more important to me than all that shit is the friends n bruddas i made on there over the 10 years.
 
-# 3. what i feel worth keeping or maybe not
+## 3. what i feel worth keeping or maybe not
 
 I'm not saying all subscriptions are bad - I still feel like some are somewhat worth it like these:
 
@@ -41,7 +41,7 @@ I'm not saying all subscriptions are bad - I still feel like some are somewhat w
 5. Github*
 6. Discord*
 
-# 4. what I change and plan to change
+## 4. what I change and plan to change
 
 1. Changed all my youtube shit over to a new account to get a new fresh feed
 2. Kinda stopped using google as a browser - now really just use brave and firefox these days

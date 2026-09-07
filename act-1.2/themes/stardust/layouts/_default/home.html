@@ -8,6 +8,10 @@
   {{ $paginator := .Paginate site.RegularPages }}
   {{ range $paginator.Pages }}
     <div class="stardust-fragment">
+      {{ with .Params.thumbnail }}
+        <img class="stardust-thumbnail" src="{{ . | relURL }}" alt="{{ $.Title }}">
+      {{ end }} 
+        
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
       <p>{{ .Summary }}</p>
     </div>

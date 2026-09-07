@@ -432,14 +432,14 @@ footer > p > a {
 
 /* special footer links */
 
-.me, .hugo, .prose {
+.me, .hugo, .prose, .obsidian {
   position: relative;
   display: inline-block; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.me::before, .hugo::before, .prose::before {
+.me::before, .hugo::before, .prose::before, .obsidian::before {
   content: "";
   position: absolute;
   display: block;
@@ -451,7 +451,7 @@ footer > p > a {
   transition: transform 0.3s ease;
 }
 
-.me:hover::before, .hugo:hover::before, .prose:hover::before {
+.me:hover::before, .hugo:hover::before, .prose:hover::before, .obsidian:hover::before {
   transform: scaleX(1);
 }
 

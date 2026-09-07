@@ -461,8 +461,8 @@ footer > p > a {
 .hugo:hover { color: var(--green-hills); }
 .hugo::before { background-color: var(--green-hills); }
 
-.octavian:hover { color: var(--neon-overdrive); }
-.octavian::before { background-color: var(--neon-overdrive); }
+.obsidian:hover { color: var(--neon-overdrive); }
+.obsidian::before { background-color: var(--neon-overdrive); }
 
 .prose:hover { color: var(--light-neon-ice); }
 .prose::before { background-color: var(--light-neon-ice); }

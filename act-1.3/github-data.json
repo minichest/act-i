@@ -1,5 +1,10 @@
 [
   {
+    "repo": "minichest/studiopolis-zone",
+    "sha": "e31924bb942829f2ad3f90da793012b8802873f9",
+    "message": "Update theme colors"
+  },
+  {
     "repo": "minichest/act-i",
     "sha": "f44fd28d6a57f84f0e2a6775cf778a2cbc43b6dd",
     "message": "major changes"
@@ -43,10 +48,5 @@
     "repo": "minichest/act-i",
     "sha": "5f1bfd64478d5e714863e7bf270c389593cdfd5e",
     "message": "mega update"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "f231b7f2e40efccd9f66ca507a16533b99596161",
-    "message": "changes"
   }
 ]

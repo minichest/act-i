@@ -1,6 +1,41 @@
 [
   {
     "repo": "minichest/act-i",
+    "sha": "476ed12b9cd4320cd023580b9e64e7f8e8909afc",
+    "message": "Merge branch 'main' of https://github.com/minichest/act-i"
+  },
+  {
+    "repo": "minichest/act-i",
+    "sha": "13202ac3366b3368435e86a5d056c2e4e487a940",
+    "message": "Update update-git-tracker.yml"
+  },
+  {
+    "repo": "minichest/act-i",
+    "sha": "19bac651a431fc875af37a61589939685dad3460",
+    "message": "Update update-git-tracker.yml"
+  },
+  {
+    "repo": "minichest/act-i",
+    "sha": "64e22ec04a26ba7888b63453f906801bb47fb434",
+    "message": "Update action.js"
+  },
+  {
+    "repo": "minichest/act-i",
+    "sha": "5ce87f99838dc0360ea22bc7b813447dc8411bf0",
+    "message": "repo n sha"
+  },
+  {
+    "repo": "minichest/act-i",
+    "sha": "22ac0e1b09b0c7d088603cbccc6d3a90752cc456",
+    "message": "Create temp-events.json"
+  },
+  {
+    "repo": "minichest/act-i",
+    "sha": "3521296a52597163edcf5ae3b0ca21a7877549c8",
+    "message": "fixing footer link for obsidian"
+  },
+  {
+    "repo": "minichest/act-i",
     "sha": "48bc6c3eae0d9cd800d170dc285c18f66a8bf966",
     "message": "Update update-git-tracker.yml"
   },
@@ -13,40 +48,5 @@
     "repo": "minichest/act-i",
     "sha": "5c58fcbc9d22233b27cda200cbec00b3834dbe48",
     "message": "Update action.js"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "3e5096a096da5aff0c4bbb047ed1190904172efa",
-    "message": "final thing"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "8ab22265d6c51708e07af0f23baee611f8531fd4",
-    "message": "widths pt 2"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "3291079d335001d2e44cb633457eee05e2a35fbc",
-    "message": "update max-width"
-  },
-  {
-    "repo": "minichest/studiopolis-zone",
-    "sha": "e31924bb942829f2ad3f90da793012b8802873f9",
-    "message": "Update theme colors"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "f44fd28d6a57f84f0e2a6775cf778a2cbc43b6dd",
-    "message": "major changes"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "67ecb357b9ee831c49f650b6283e03a53f3b610e",
-    "message": "Update update-git-tracker.yml"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "139f6bc170888f823629982f79dbb565f724aa09",
-    "message": "Update update-git-tracker.yml"
   }
 ]

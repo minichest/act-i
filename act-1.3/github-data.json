@@ -1,5 +1,10 @@
 [
   {
+    "repo": "minichest/cdn",
+    "sha": "dfd04d86dad15134397aa151f2029ee28178216e",
+    "message": "Add files via upload"
+  },
+  {
     "repo": "minichest/act-i",
     "sha": "476ed12b9cd4320cd023580b9e64e7f8e8909afc",
     "message": "Merge branch 'main' of https://github.com/minichest/act-i"
@@ -43,10 +48,5 @@
     "repo": "minichest/act-i",
     "sha": "c9d299012f5e99bff0bb9fa9d45da53aebd7a801",
     "message": "new me"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "5c58fcbc9d22233b27cda200cbec00b3834dbe48",
-    "message": "Update action.js"
   }
 ]

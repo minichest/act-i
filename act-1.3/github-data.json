@@ -1,6 +1,16 @@
 [
   {
     "repo": "minichest/cdn",
+    "sha": "ab98dde3c0fa247e5b48644ef24dfd7fe6388036",
+    "message": "Add files via upload"
+  },
+  {
+    "repo": "minichest/cdn",
+    "sha": "4c170614ae39ba9810dccf4f8891ea27aa19a6e6",
+    "message": "Add branding notice to readme.txt"
+  },
+  {
+    "repo": "minichest/cdn",
     "sha": "3f4eb4856cd08e4515b5a0652a099a6e2aa923a5",
     "message": "Add files via upload"
   },
@@ -38,15 +48,5 @@
     "repo": "minichest/act-i",
     "sha": "22ac0e1b09b0c7d088603cbccc6d3a90752cc456",
     "message": "Create temp-events.json"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "3521296a52597163edcf5ae3b0ca21a7877549c8",
-    "message": "fixing footer link for obsidian"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "48bc6c3eae0d9cd800d170dc285c18f66a8bf966",
-    "message": "Update update-git-tracker.yml"
   }
 ]

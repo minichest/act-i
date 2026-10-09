@@ -18,35 +18,5 @@
     "repo": "minichest/cdn",
     "sha": "dfd04d86dad15134397aa151f2029ee28178216e",
     "message": "Add files via upload"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "476ed12b9cd4320cd023580b9e64e7f8e8909afc",
-    "message": "Merge branch 'main' of https://github.com/minichest/act-i"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "13202ac3366b3368435e86a5d056c2e4e487a940",
-    "message": "Update update-git-tracker.yml"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "19bac651a431fc875af37a61589939685dad3460",
-    "message": "Update update-git-tracker.yml"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "64e22ec04a26ba7888b63453f906801bb47fb434",
-    "message": "Update action.js"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "5ce87f99838dc0360ea22bc7b813447dc8411bf0",
-    "message": "repo n sha"
-  },
-  {
-    "repo": "minichest/act-i",
-    "sha": "22ac0e1b09b0c7d088603cbccc6d3a90752cc456",
-    "message": "Create temp-events.json"
   }
 ]

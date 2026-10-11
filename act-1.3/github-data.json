@@ -1,6 +1,11 @@
 [
   {
     "repo": "minichest/cdn",
+    "sha": "9a8ab51ed83d5cf119070f231986d1fde0cbc273",
+    "message": "Add files via upload"
+  },
+  {
+    "repo": "minichest/cdn",
     "sha": "ab98dde3c0fa247e5b48644ef24dfd7fe6388036",
     "message": "Add files via upload"
   },

@@ -1,5 +1,10 @@
 [
   {
+    "repo": "minichest/week-2-c-hashtag",
+    "sha": "85df23a4dc7a032b626796ae6059046bfa185cc2",
+    "message": "first author age program"
+  },
+  {
     "repo": "minichest/cdn",
     "sha": "9a8ab51ed83d5cf119070f231986d1fde0cbc273",
     "message": "Add files via upload"

@@ -1,6 +1,11 @@
 [
   {
     "repo": "minichest/week-2-c-hashtag",
+    "sha": "27451cc3c1dec5f70293c0f78767f29300e7eba4",
+    "message": "final book stuff"
+  },
+  {
+    "repo": "minichest/week-2-c-hashtag",
     "sha": "4af3b3c9245fea04beff0a130200c97e3d6f0c24",
     "message": "final book"
   },

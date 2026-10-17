@@ -1,6 +1,11 @@
 [
   {
     "repo": "minichest/week-2-c-hashtag",
+    "sha": "0b882b545c4c7750f3982b2f08fb9e2da32e8645",
+    "message": "finished author and introducing book"
+  },
+  {
+    "repo": "minichest/week-2-c-hashtag",
     "sha": "85df23a4dc7a032b626796ae6059046bfa185cc2",
     "message": "first author age program"
   },

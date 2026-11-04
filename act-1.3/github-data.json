@@ -1,5 +1,15 @@
 [
   {
+    "repo": "minichest/cdn",
+    "sha": "dd90b13cbc6d60a44660fb88f5026ee296d78dfb",
+    "message": "Add files via upload"
+  },
+  {
+    "repo": "minichest/cdn",
+    "sha": "4a94953942a970bb1e10e1990f610e3d869c0001",
+    "message": "Add readme.txt with Sonic CD image sources"
+  },
+  {
     "repo": "minichest/week-2-c-hashtag",
     "sha": "27451cc3c1dec5f70293c0f78767f29300e7eba4",
     "message": "final book stuff"
